@@ -1,0 +1,20 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "This app provides a single interface for managing all work order tickets within a company.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadontenzin3/Ticket-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dadontenzin3/Ticket-Tracker/issues"
+  },
+  "homepage": "https://github.com/dadontenzin3/Ticket-Tracker#readme"
+}
