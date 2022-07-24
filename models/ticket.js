@@ -25,6 +25,4 @@ const ticketSchema = new Schema({
 }, {timestamps: true});
 
 // export the model to be used within our controller 
-const Ticket = mongoose.model('Ticket', ticketSchema);
-
-module.exports = Ticket; 
+module.exports = mongoose.model('Ticket', ticketSchema);
