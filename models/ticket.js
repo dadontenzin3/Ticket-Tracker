@@ -18,6 +18,10 @@ const ticketSchema = new Schema({
         type: String, 
         require: true
     },
+    requestor: {
+        type: String,
+        require: true
+    },
     status: {
         type: String, 
         require: true

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Ticket</title>
+</head>
+<body>
+    <h1>Edit a Ticket</h1>
+
+    <form action="/tickets/<%=editTicket.id%>?_method=PUT" method="post">
+        <p>Department</p>
+        <input type="text" name="department" value="<%=editTicket.department%>">
+        <p>Request</p>
+        <input type="text" name="request" value="<%=editTicket.request%>">
+        <p>Requestor</p>
+        <input type="text" name="requestor" value="<%=editTicket.requestor%>">
+        <p>Status</p>
+        <input type="text" name="status" value="<%=editTicket.status%>">
+        <p></p>
+        <input type="submit" value="update">
+    </form>
+
+</body>
+</html>

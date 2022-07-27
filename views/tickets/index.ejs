@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Order Tickets</title>
+</head>
+<body>
+    <h1>Work Order Tickets</h1>
+    <h2><button><a href='tickets/new'>Open New Ticket</a></button></h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ticket Number</th>
+                <th>Department</th>
+                <th>Request</th>
+                <th>Requestor</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% tickets.forEach ((tickets, index) => { %> 
+                <tr>
+                    <th><a href="tickets/<%=tickets.id %>"><%= tickets.id %></a></th>
+                    <th><%= tickets.department %></th>
+                    <th><%= tickets.request %></th>
+                    <th><%= tickets.requestor %></th>
+                    <th><%= tickets.status %></th>
+                    <th><%= tickets.createdAt %></th>
+                    <th><a href="tickets/<%=tickets.id %>/edit">Edit</th>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
