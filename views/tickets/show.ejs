@@ -14,7 +14,7 @@
                 <th>Ticket Number</th>
                 <th>Department</th>
                 <th>Request</th>
-                <th>Last Modified By</th>
+                <th>Latest Update</th>
                 <th>Status</th>
                 <th>Created At</th>
                 <th>Make Changes</th>
@@ -25,8 +25,13 @@
                     <th><%= findTicket.id %></th>
                     <th><%= findTicket.department %></th>
                     <th><%= findTicket.request %></th>
+                    <th><%= findTicket.update %></th>
                     <th><%= findTicket.status %></th>
-                    <th><%= findTicket.createdAt %></th>
+                    <% let d = findTicket.createdAt %>
+                    <% let d2 = d.toString() %>
+                    <% let date = d2.substr(0,15) %>
+                    <th><%= date %></th>
+                    <th><a href="/tickets/<%=findTicket.id %>/edit">Edit</th>
                 </tr>
         </tbody>
     </table>

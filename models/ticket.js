@@ -22,10 +22,17 @@ const ticketSchema = new Schema({
         type: String,
         require: true
     },
+    user: {
+        type: Schema.Types.ObjectId, red: 'User'
+    },
+    update: {
+        type: String, 
+        require: true
+    },
     status: {
         type: String, 
         require: true
-    }   
+    },
 }, {timestamps: true});
 
 // export the model to be used within our controller 
