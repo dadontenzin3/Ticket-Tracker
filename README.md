@@ -32,7 +32,7 @@ This app provides a single interface for managing all work order tickets within 
 
 # Getting Started 
 
-[Click here](enter link here )
+[Click here](https://ticket-tracker-123.herokuapp.com/)
 
 # Future Enhancements 
 
