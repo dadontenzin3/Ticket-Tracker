@@ -27,8 +27,8 @@
                 <th scope="col">Requestor</th>
                 <th scope="col">Latest Update</th>
                 <th scope="col">Status</th>
-                <th scope="col">Created</th>
-                <th scope="col"> Changes</th>
+                <th scope="col">Creation Date</th>
+                <th scope="col">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -41,13 +41,16 @@
                     <% let requ = s2.substr(0,15) %>
                     <td><%= requ %></td>
                     <td><%= tickets.requestor %></td>
-                    <td><%= tickets.update %></td>
+                    <% let t = tickets.update %>
+                    <% let t2 = t.toString() %>
+                    <% let update = t2.substr(0,15) %>
+                    <td><%= update %></td>
                     <td><%= tickets.status %></td>
                     <% let d = tickets.createdAt %>
                     <% let d2 = d.toString() %>
                     <% let date = d2.substr(0,15) %>
                     <td><%= date %></td>
-                    <td><a href="tickets/<%=tickets.id %>/edit">Edit</td>
+                    <td><a href="tickets/<%=tickets.id %>/edit" class="btn btn-warning">Edit</td>
                 </tr>
             <% }) %>
         </tbody>

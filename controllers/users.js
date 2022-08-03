@@ -90,7 +90,7 @@ usersRouter.put('/profile/edit', auth, (req, res) => {
 // profile DELETE route - deletes the user from the database
 usersRouter.delete('/profile', auth, (req, res) => {
     User.findByIdAndDelete(req.session.user, (err, user) => {
-        Log.deleteMany({ user: req.session.user }, (err, logs) => {
+        Ticket.deleteMany({ user: req.session.user }, (err, logs) => {
             req.session.destroy(() => {
                 res.redirect('/users/signup');
             });
